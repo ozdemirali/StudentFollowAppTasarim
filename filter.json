@@ -1,0 +1,29 @@
+{
+    "Id":"236556985564",
+    "WhitWhomLives":0,
+    "RenOfHouse":0,   
+    "HaveOwnRoom":false,
+    "HowToGetSchool":0,
+    "TypeOfDisanility":0,
+    "Working":false,
+    "OutsideFromFamily":false,
+    "CameFromAbroad":false,
+    "Scheck":false,
+    "FamilyIncomeMoney":2500,
+    "SablingCount":1
+    },
+// Frontend aşağıdaki gibi göndermesi grekiyor 
+//http://ak-dynamic-linq.azurewebsites.net/
+    {
+        "Id":"21313123",
+        "filter":[
+          {"paramete":"WhitWhomLives","value":0,"type":0},
+          {"paramete":"RentOfHouse","value":0,"type":1},
+          {"paramete":"HaveOwnRoom","value":false,"type":2}
+        ] 
+      }
+
+      var query = db.Customers
+     .Where("City = @0 and Orders.Count >= @1", "London", 10)
+     .OrderBy("CompanyName")
+     .Select("new(CompanyName as Name, Phone)");
